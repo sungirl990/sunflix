@@ -1,4 +1,37 @@
 .App {
   text-align: center;
+  margin: 0 auto;
+}
+
+img {
+  width: 400px;
+  height: 600px;
+}
+
+.app__layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.item {
+  text-align: center;
+  position: relative; 
+  margin-bottom: -3px;
+  overflow: hidden;
+}
+
+.app__title {
+  position: absolute;
+  width: 100%;
+  bottom: -100px;
+  background-color: rgb(15, 219, 192);
+  opacity: 0;
+  transition: bottom ease 0.4s;
+}
+
+.item:hover .app__title {
+  opacity: 0.8;
+  bottom: 0;
 }
 
