@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <h1>My library</h1>
         <Route exact path='/' component={Movies} />
-        <Route exact path='/Details' component={Details} />
+        <Route exact path='/:Details' component={Details} />
       </div>
     </Router>  
   );
