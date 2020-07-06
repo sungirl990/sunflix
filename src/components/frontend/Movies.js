@@ -1,7 +1,6 @@
 import React from 'react';
-
 import Stack from './Stack.js';
-import getMovie from './GetMovie.js';
+import getMovie from '../frontend/GetMovie';
 
 
 export default function Movies() {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Movies from './Movies';
-import Details from './Details';
+import Movies from './components/frontend/Movies.js';
+import Details from './components/frontend/Details.js';
 
-import './App.css';
+import '../src/components/frontend/App.css';
 
 function App() {
   return (
