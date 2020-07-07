@@ -1,28 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import GetMovie from './GetMovie.js';
 
 export default class Details extends Component {
 
     constructor() {
         super();
         this.state = {
-            welcomeMessage: 'Welcome to the details page'
+            movie: {}
         };
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                welcomeMessage: 'Work in Progress'
-            });
-        }, 3000);
+        let movieId = this.props.match.params.movieId;
+        let movie = GetMovie().find((movie) => movie.id === movieId);
+        this.setState({ movie });
     }
 
     render() {
         return (
             <div>
-                <h1>{this.state.welcomeMessage}</h1>
+                <h3>{this.state.movie.name}</h3>
                 <Link to='/'>Go Back</Link>
             </div>
         );
